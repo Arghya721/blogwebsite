@@ -82,7 +82,7 @@ passport.serializeUser(function(user, done) {
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://web-production-5988.up.railway.app/auth/google/callback",
+    callbackURL: "https://blogwebsite-hm18.onrender.com/auth/google/callback",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -107,7 +107,7 @@ app.get('/auth/google/callback',
 passport.use(new FacebookStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://web-production-5988.up.railway.app/auth/facebook/callback/",
+    callbackURL: "https://blogwebsite-hm18.onrender.com/auth/facebook/callback/",
     profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(large)','email']
   },
   function(accessToken, refreshToken, profile, cb) {
